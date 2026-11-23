@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f1e8">
+  <title>BazaarCart | Shop local</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="top"><a class="brand" href="/">BazaarCart<span>.</span></a>
+    <nav aria-label="Main navigation"><a href="/" id="shop-link">Shop</a><a href="/?view=seller" id="seller-link">Seller dashboard</a></nav>
+  </header>
+  <main>
+    <section id="shop">
+      <div class="hero"><p>ISLAMABAD CLOTHING EDIT</p><h1>Everyday pieces.<br>Local sellers.</h1><a class="button" href="#catalog">Browse catalog</a></div>
+      <div class="layout">
+        <section id="catalog"><h2>In stock</h2><p id="catalog-status" role="status"></p><div id="products" class="products"></div></section>
+        <aside class="assistant" aria-label="Shopping assistant">
+          <h2>Shopping assistant</h2><p>Ask about sizes, find a match, or check out.</p>
+          <div id="messages" class="messages" role="log" aria-label="Conversation"></div>
+          <form id="chat"><label for="message" class="sr-only">Message</label><input id="message" autocomplete="off" maxlength="1200" required placeholder="A black shirt under PKR 2,500"><button>Send</button></form>
+          <div class="actions"><button id="cart" type="button">View cart</button><button id="checkout" type="button">Check out</button><button id="confirm" type="button" hidden>Confirm order</button><button id="new-chat" type="button">New chat</button></div>
+        </aside>
+      </div>
+    </section>
+    <section id="seller" hidden>
+      <div class="hero compact"><p>SELLER WORKSPACE</p><h1>Manage your store.</h1></div>
+      <div class="seller-content">
+        <form id="seller-auth"><label for="token">Seller access token</label><div class="input-row"><input id="token" type="password" autocomplete="off" required><button>Open dashboard</button></div></form>
+        <p id="seller-status" role="status"></p>
+        <div id="seller-data" hidden>
+          <div class="metrics"><div><span>Orders</span><strong id="order-count"></strong></div><div><span>Total sales</span><strong id="sales-total"></strong></div></div>
+          <form id="upload"><label for="csv">Upload catalog CSV</label><p>Columns: sku, name, color, size, price, stock.</p><div class="input-row"><input id="csv" type="file" accept=".csv,text/csv" required><button>Upload</button></div></form>
+          <h2>Inventory</h2><div class="table-wrap"><table><thead><tr><th>SKU</th><th>Product</th><th>Size</th><th>Price</th><th>Stock</th></tr></thead><tbody id="inventory"></tbody></table></div>
+          <h2>Recent orders</h2><div class="table-wrap"><table><thead><tr><th>Order</th><th>Time</th><th>Items</th><th>Total</th></tr></thead><tbody id="orders"></tbody></table></div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
