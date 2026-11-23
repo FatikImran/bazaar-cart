@@ -69,7 +69,8 @@ Demo GIF and video depend on the configured storefront and live checkout. See th
 | Local API and graph contract tests | 6/6 passed |
 | Running local HTTP health endpoint | HTTP 200, body `ok` |
 | JavaScript syntax | Passed |
-| ShopBot live benchmark | Pending hosted database and Claude configuration |
-| Live adversarial benchmark | Pending hosted services. Five project-authored safety cases are included. |
+| ShopBot live benchmark on Railway | 10/10 passed |
+| Project-authored live safety cases on Railway | 5/5 passed |
+| Model tokens across all 15 live cases | 3,695 input, 227 output |
 
 Run the local tests with `python -m pytest -q` after installing pytest. Run the deployed benchmark with `python benchmark.py https://YOUR-API-HOST`. See [verification details](docs/VERIFICATION.md) and [the benchmark cases](tests.json).
