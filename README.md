@@ -4,6 +4,8 @@ BazaarCart gives small clothing sellers in Islamabad a hosted catalog, a shoppin
 
 **Track** ShopBot ? **Group** 13 ? **Course** AI-4016 Agentic AI, Section A
 
+[Live storefront](https://bazaar-cart-web.vercel.app/) · [Agent API health](https://bazaar-cart-production.up.railway.app/health)
+
 ## Architecture
 
 ```mermaid
@@ -54,13 +56,15 @@ Exact UI commands for viewing the cart, checking out, and confirming bypass the 
 
 ## Screenshots
 
-Captured from the running local UI before the cloud services were configured. The second image shows the seller access screen.
+Captured from the live storefront and authenticated seller dashboard.
 
 ![BazaarCart storefront preview](docs/storefront.png)
 
-![Seller dashboard access screen](docs/seller-dashboard.png)
+![Seller dashboard with inventory and recent demo orders](docs/seller-dashboard.png)
 
-Demo GIF and video depend on the configured storefront and live checkout. See the deployment guide for the recording flow.
+## Demo
+
+![Live checkout, seller dashboard, memory, and safety demo](docs/bazaarcart-demo.gif)
 
 ## Benchmark
 
